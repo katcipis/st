@@ -175,6 +175,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ XK_NO_MOD,            XK_F9,          clippaste,      {.i =  0} },
+	{ XK_NO_MOD,            XK_F5,          clipcopy,       {.i =  0} },
 };
 
 /*
