@@ -48,4 +48,7 @@ uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
 
-.PHONY: all clean dist install uninstall
+nixos-shell:
+	nix-shell -p gcc pkg-config fontconfig libx11 libxft
+
+.PHONY: all clean dist install uninstall nixos-shell
