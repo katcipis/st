@@ -953,14 +953,15 @@ xloadfont(Font *f, FcPattern *pattern)
 		}
 	}
 
-	if ((XftPatternGetInteger(pattern, "weight", 0, &wantattr) ==
-	    XftResultMatch)) {
-		if ((XftPatternGetInteger(f->match->pattern, "weight", 0,
-		    &haveattr) != XftResultMatch) || haveattr != wantattr) {
-			f->badweight = 1;
-			fputs("font weight does not match\n", stderr);
-		}
-	}
+        // FIXME(katcipis): not sure this is a good idea.
+	/*if ((XftPatternGetInteger(pattern, "weight", 0, &wantattr) ==*/
+	    /*XftResultMatch)) {*/
+		/*if ((XftPatternGetInteger(f->match->pattern, "weight", 0,*/
+		    /*&haveattr) != XftResultMatch) || haveattr != wantattr) {*/
+			/*f->badweight = 1;*/
+			/*fputs("font weight does not match\n", stderr);*/
+		/*}*/
+	/*}*/
 
 	XftTextExtentsUtf8(xw.dpy, f->match,
 		(const FcChar8 *) ascii_printable,
